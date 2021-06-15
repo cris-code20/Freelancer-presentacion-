@@ -1,0 +1,257 @@
+:root{
+    --blanco: #ffffff;
+    --negrito: #212121;
+    --pri: #ffc107;
+    --seg:#0097a7;
+    --gris: #757575;
+    --degradado: #E0E4F8;
+}
+
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+.servicios, .navegacion, .formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to top, var(--degradado) 0%, var(--blanco)100%);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.sombra{
+    box-shadow:         3px 3px 5px 6px rgb(195, 193, 193);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+
+}
+
+h1{
+    font-size: 3.8rem;
+}
+
+h2{
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+span{
+    font-size: 2rem;
+}
+.d{
+    color: red;
+}
+
+.r{
+    color: blue;
+}
+.contenedor{
+    max-width: 90rem;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+.boton{
+    background-color: #31BAF1;
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .boton{
+        width: auto;
+    }
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+.nv-bg{
+    background-color: #31BAF1;
+}
+
+.navegacion{
+display: flex;
+flex-direction: column;
+
+}
+
+@media (min-width: 780px) {
+    .navegacion{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+.navegacion a{
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    
+}
+
+.navegacion a:hover{
+    background-color: #B7E68E;
+    color: var(--negrito);
+}
+
+.hero{
+    color: var(--blanco);
+    background-image: url(../src/img/interface-3614766_1280.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+
+.contenedor-hero{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-hero h2,
+.contenedor-hero p{
+}
+
+.ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
+
+
+@media (min-width: 760px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3{
+    color: blue;
+    font-weight: normal;
+}
+
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .icono {
+    height: 15rem;
+    width: 15rem;
+    background-color: #B7E68E;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario{
+    background-color: #757575;
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #B7E68E;
+}
+
+@media (min-width: 768px) {
+    
+    .contenedor-fomulario{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+}
+.campo:nth-child(3),
+.campo:nth-child(4){
+    grid-column: 1/3;
+}
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: #E0E4F8;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.enviar .boton{
+    width: 100%;
+    padding: 2rem;
+}
+
+footer{
+    text-align: center;
+}
